@@ -15,11 +15,10 @@ Matrix is a matrix multiply demostration demostrate the effect of cache conflict
 
 	Multiple threads run on different cpus(set by cpu affinity) execute matrix mul-
 	tiply, when they are designed to write the adjacent memory address in matrix C, 
-	the memory items may be just right mapped to the same cache line, there will be
-	some waste of time to keep cache consistence inside of the cpu.
+	there will be a waste of time for each cpu to keep the cache line consistence. 
 
 	So it's better to partition the threads to write different cache line avoiding 
-	the cache consistence waste.
+	the consistence waste.
 
 
 ##	Testing Result
