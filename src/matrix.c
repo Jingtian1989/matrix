@@ -371,10 +371,10 @@ int main(int argc, char *argv[])
 	}
 	statistics(threads);
 
-	free(matrix_a);
-	free(matrix_b);
-	free(matrix_c);
-	free(matrix_d);
+	free_matrix(matrix_a);
+	free_matrix(matrix_b);
+	free_matrix(matrix_c);
+	free_matrix(matrix_d);
 	free(threads);
 	return 0;
 }
