@@ -50,7 +50,7 @@ void usage_error(char *name)
 	printf("\t-m 0(cache_conflict) | 1(no_cache_conflict)\n");
 	printf("\t-t thread_count\n");
 	printf("\t-s matrix_size\n");
-	printf("\t-d(dumping matrixs)\n");
+	printf("\t-d (dumping matrixs)\n");
 	exit(0);
 }
 
