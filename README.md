@@ -1,6 +1,6 @@
 #	matrix
 
-Matrix is a matrix multiply demostration demostrate the effect of cache conflict on SMP.
+Matrix is a matrix multiplication demostration demostrate the effect of cache conflict on SMP.
 
 
 ##	Commands
@@ -14,8 +14,9 @@ Matrix is a matrix multiply demostration demostrate the effect of cache conflict
 ##	How To Avoid Cache Conflict
 
 	Multiple threads run on different cpus(set by cpu affinity) execute matrix mul-
-	tiply, when they are designed to write the adjacent memory address in matrix C, 
-	there will be a waste of time for each cpu to keep the cache line consistence. 
+	tiplication, when they are designed to write the adjacent memory address in ma-
+	trix C, there will be a waste of time for each cpu to keep the cache line cons-
+	istence. 
 
 	So it's better to partition the threads to write different cache line avoiding 
 	the consistence waste.
@@ -23,9 +24,9 @@ Matrix is a matrix multiply demostration demostrate the effect of cache conflict
 
 ##	Testing Result
 	
-	I run the program on a AMD 4-physical core with -t 4 (4 threads each bonding to
-	a different cpu), -s 1024 (1024 square matrix), the -m 1 (no_cache_conflict) ha-
-	d a 50% performance promoting than -m 0 (cache conflict).
+	I run the program on an AMD 4-physical core with -t 4 (4 threads each bonding 
+	to a different cpu), -s 1024 (1024 square matrix), the -m 1 (no_cache_conflict)
+	had a 50% performance promoting than -m 0 (cache conflict).
 
 
 ##	How To Use It
